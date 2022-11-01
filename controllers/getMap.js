@@ -5,8 +5,8 @@ require("dotenv").config();
 const getMap = async (req, res = response) => {
     console.log("data");
     var s3Bkt = new s3({
-        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+        accessKeyId: process.env.AWS_ACCESS_KEY_ID_,
+        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY_,
     });
 
     const MONTH = 10;
