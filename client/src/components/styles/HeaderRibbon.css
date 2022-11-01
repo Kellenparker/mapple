@@ -1,0 +1,141 @@
+.header-ribbon {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+}
+.ribbon {
+    background: #f3dab1;
+    box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.5);
+    font-family: "Dancing Script", cursive;
+    width: 60vw;
+    max-width: 700px;
+    height: 8vh;
+    font-size: 16px;
+    line-height: 1;
+    text-align: center;
+    margin: 3vh auto;
+    padding: 0.25em 0;
+    position: relative;
+}
+.ribbon:before,
+.ribbon:after {
+    border: 1.5em solid #f3dab1;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -1em;
+    z-index: -1;
+}
+.ribbon:before {
+    left: -2em;
+    border-right-width: 1.5em;
+    border-left-color: transparent;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.ribbon:after {
+    right: -2em;
+    border-left-width: 1.5em;
+    border-right-color: transparent;
+    box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 800px) {
+    .ribbon {
+        width: 80vw;
+    }
+}
+
+.ribbon-content {
+    border-top: 0.2vh dashed rgb(171, 0, 0);
+    border-bottom: 0.2vh dashed rgb(171, 0, 0);
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.08), inset 0px -1px 1px rgba(255, 255, 255, 0.08),
+        0px -1px 1px rgba(255, 255, 255, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.08);
+    display: block;
+    padding: 1.15vh 0;
+}
+.ribbon-content:before,
+.ribbon-content:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-style: solid;
+    border-color: #867761 transparent transparent transparent;
+    bottom: -1em;
+}
+.ribbon-content:before {
+    left: 0;
+    border-width: 1em 0 0 1em;
+}
+.ribbon-content:after {
+    right: 0;
+    border-width: 1em 1em 0 0;
+}
+.ribbon a {
+    color: hsl(30, 90%, 40%);
+    text-decoration: none;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.25);
+}
+
+.non-semantic-protector {
+    position: relative;
+    z-index: 1;
+}
+
+.ribbon-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.title {
+    padding-left: 2vw;
+    font-size: 5vh;
+    color: rgb(171, 0, 0);
+    text-shadow: 1px 1px 0 black;
+    font-weight: bold;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.buttons {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.dash {
+    font-family: "Dancing Script", cursive;
+    font-size: 4vh;
+    margin-left: auto;
+    margin-left: auto;
+    padding: 0 0 0 0;
+    line-height: 0;
+    font-weight: bolder;
+    color: rgb(0, 88, 143);
+}
+
+.b {
+    font-family: "Dancing Script", cursive;
+    font-weight: bolder;
+    color: rgb(0, 88, 143);
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.494);
+    font-size: 4vh;
+}
+
+.b,
+.b:focus {
+    outline: none;
+    background: transparent;
+    border: 1px solid transparent;
+}
+
+.b:hover {
+    background-color: rgba(0, 0, 0, 0.057);
+    border-radius: 10px;
+}
+
+.b:active {
+    background-color: rgba(0, 0, 0, 0.105);
+    border-radius: 10px;
+}

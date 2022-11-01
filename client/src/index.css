@@ -1,0 +1,9 @@
+body {
+    background-color: #e3ceb5;
+    background: repeating-linear-gradient(45deg, #ffe8d3, #ffe8d3 5px, #f7efe5 5px, #f7efe5 25px);
+    margin: 0;
+    font-family: "Dancing Script", cursive;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: fixed;
+}

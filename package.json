@@ -1,0 +1,36 @@
+{
+    "name": "mapple",
+    "version": "1.0.0",
+    "description": "map guessing web application",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index",
+        "server": "nodemon",
+        "client": "npm start --prefix client",
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "build": "npm run build --prefix client"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Kellenparker/mapple.git"
+    },
+    "author": "Kellen Parker",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Kellenparker/mapple/issues"
+    },
+    "homepage": "https://github.com/Kellenparker/mapple#readme",
+    "dependencies": {
+        "aws-sdk": "^2.1243.0",
+        "concurrently": "^7.5.0",
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "nodemon": "^2.0.20",
+        "path": "^0.12.7",
+        "request": "^2.88.2",
+        "require": "^0.4.4",
+        "uglify-js": "^3.17.4"
+    }
+}

@@ -1,0 +1,47 @@
+
+.dialogBoxStats {
+    max-height: 560px;
+    max-width: 400px;  
+    height: 70%;
+    width: 90%;
+    background: #f3dab1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0,0,0,.4);
+    border-radius: 10px;
+    overflow: scroll;
+}
+
+.statsTitle {
+    margin: 0;
+    margin-top: 20px;
+    font-size: 7vh;
+    color: rgb(255, 255, 255);
+    text-shadow: 1.5px 1.5px 0 rgb(171, 0, 0), 3px 3px 0 black, 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.statCont {
+    display: flex;
+    justify-content: center;
+}
+
+.stat {
+    font-family: "Unna", serif;
+    font-size: 3vh;
+    text-shadow: 0.3px 0.3px 0 rgb(0, 0, 0);
+    text-align: left;
+    margin-left: 30px;
+    margin-right: auto;
+}
+
+.statVal {
+    font-family: "Unna", serif;
+    font-size: 3vh;
+    font-weight: bold;
+    color: rgb(171, 0, 0);
+    text-shadow: .7px .7px 0 rgb(0, 0, 0);
+    text-align: right;
+    margin-right: 30px;
+    margin-left: auto;
+}

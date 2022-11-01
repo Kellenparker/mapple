@@ -1,0 +1,50 @@
+
+.header-wrap {
+    position: fixed;
+}
+
+.header-small {
+    height: 80px;
+    width: 100vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-bottom: solid 3px rgb(171, 0, 0);
+    background-color: rgba(243, 218, 177, 1);
+    display: flex;
+    align-items: center;
+}
+
+.header-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titlesm {
+    padding-left: 15px;
+    font-size: 40px;
+}
+
+.buttonssm {
+    padding-right: 15px;
+    font-size: 20px;
+}
+
+.dashsm {
+    font-size: 20px;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.bsm {
+    font-size: 25px;
+}
+
+@media (max-width: 330px) {
+    .title {
+        font-size: 30px;
+    }
+    .b {
+        font-size: 20px;
+    }
+}

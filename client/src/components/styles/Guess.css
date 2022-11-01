@@ -1,0 +1,165 @@
+.guessCont {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+}
+
+.guesses {
+    height: 150px;
+    width: 200px;
+    align-self: center;
+    background-color: #f3dab1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-bottom: 3px solid rgb(171, 0, 0);
+    border-top: 3px solid rgb(171, 0, 0);
+}
+
+.guessTitle {
+    margin-top: 1vh;
+    font-size: 25px;
+    margin-bottom: 0;
+    color: rgb(0, 88, 143);
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.494);
+}
+
+.guessList {
+    font-size: 16px;
+    margin-bottom: auto;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    color: rgb(43, 43, 43);
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.494);
+    font-weight: bolder;
+    text-align: left;
+}
+
+.yearform {
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    margin-left: 3vw;
+}
+
+.yearfield {
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    width: 150px;
+    height: 70px;
+    color: rgb(171, 0, 0);
+    background-color: #f3dab1;
+    border: none;
+    border-bottom: 3px solid rgb(171, 0, 0);
+    border-top: 3px solid rgb(171, 0, 0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 0 black;
+    font-family: "Dancing Script", cursive;
+    pointer-events: all;
+}
+
+.yearfield:focus {
+    outline: none;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(121, 121, 121, 1);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+    opacity: 0.4; /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgba(121, 121, 121, 1);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+    opacity: 0.4;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: rgba(121, 121, 121, 1);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+    opacity: 0.4;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    appearance: textfield;
+}
+
+.subBtn {
+    border: none;
+    width: 150px;
+    height: 50px;
+    background-color: rgb(171, 0, 0);
+    font-family: "Dancing Script", cursive;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 0 rgb(0, 88, 143);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-size: 35px;
+    pointer-events: all;
+}
+
+.subBtn:hover {
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.508);
+}
+
+.subBtn:active {
+    outline: none;
+    border: 1px solid grey;
+    background-color: rgb(128, 0, 0);
+}
+
+@media (max-width: 375px) {
+    .guessCont {
+        flex-direction: column;
+    }
+    .guesses {
+        margin-bottom: 10px;
+        height: 100px;
+        width: 170px;
+    }
+    .guessTitle {
+        margin-top: 0;
+        font-size: 17px;
+    }
+    .guessList {
+        font-size: 12px;
+    }
+    .yearform {
+        margin-bottom: 10px;
+        width: 200px;
+        margin-left: 0;
+    }
+    .yearfield {
+        width: 70%;
+        height: 50px;
+        font-size: 25px;
+        margin: auto;
+    }
+    .subBtn {
+        width: 70%;
+        height: 40px;
+        font-size: 20px;
+        margin: auto;
+    }
+}
