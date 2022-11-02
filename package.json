@@ -29,6 +29,7 @@
         "express": "^4.18.2",
         "nodemon": "^2.0.20",
         "path": "^0.12.7",
+        "react-scripts": "^5.0.1",
         "request": "^2.88.2",
         "require": "^0.4.4",
         "uglify-js": "^3.17.4"
