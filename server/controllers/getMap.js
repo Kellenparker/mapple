@@ -3,7 +3,6 @@ const s3 = require("aws-sdk/clients/s3"); // npm install aws-sdk
 require("dotenv").config();
 
 const getMap = async (req, res = response) => {
-    console.log("data");
     var s3Bkt = new s3({
         accessKeyId: process.env.AWS_ACCESS_KEY_ID_,
         secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY_,

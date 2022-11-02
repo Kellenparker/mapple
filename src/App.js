@@ -93,8 +93,11 @@ class App extends React.Component {
 
     onFocusUpdate() {
         console.log("here123");
-        clearInterval(this.countDown);
-        this.handleCountdown();
+
+        if(this.state.win){
+            clearInterval(this.countDown);
+            this.handleCountdown();
+        }
     }
 
     getTime = async () => {

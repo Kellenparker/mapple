@@ -7,7 +7,7 @@ const { getTime } = require('../controllers/getTime');
 class Server {
     constructor() {
         this.app = express();
-        this.port = process.env.PORT;
+        this.port = process.env.PORT_SERVER;
         this.paths = {
             getMap: "/api/getMap",
             getTime: "/api/getTime",
@@ -22,7 +22,7 @@ class Server {
         this.app.use(express.json());
 
         // Pick up React index.html file
-        this.app.use(express.static(path.join(__dirname, "../client/build")));
+        this.app.use(express.static(path.join(__dirname, "../../build")));
     }
 
     // Bind controllers to routes
@@ -31,7 +31,8 @@ class Server {
         this.app.get(this.paths.getTime, getTime);
         // Catch all requests that don't match any route
         this.app.get("*", (req, res) => {
-            res.sendFile(path.join(__dirname, "../client/build/index.html"));
+            console.log("here");
+            res.sendFile(path.join(__dirname, "../../build/index.html"));
         });
     }
 
