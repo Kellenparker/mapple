@@ -8,8 +8,8 @@ const getMap = async (req, res = response) => {
         secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY_,
     });
 
-    const MONTH = 10;
-    const DAY = 31;
+    const MONTH = 11;
+    const DAY = 7;
     var now = new Date();
     var start = new Date(now.getFullYear(), MONTH - 1, DAY - 1);
     
@@ -21,14 +21,14 @@ const getMap = async (req, res = response) => {
     var oneDay = 1000 * 60 * 60 * 24;
     var day = Math.floor(diff / oneDay);
 
-    var params = { Bucket: "geologicle", Key: `maps/${day}/info.txt` };
+    var params = { Bucket: "geologicle", Key: `${day}/info.txt` };
     s3Bkt.getObject(params, function (err, data) {
         if (err) {
             console.log(err.message);
         } else {
             var data = Buffer.from(data.Body).toString("utf8");
             res.json({
-                date: data,
+                info: data.split(/\r?\n/),
                 day: day,
                 next: tomorrow,
             });

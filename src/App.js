@@ -7,6 +7,7 @@ import React from "react";
 import Help from "./components/Help";
 import Stats from "./components/Stats";
 import Share from "./components/Share";
+import MapInfo from "./components/MapInfo";
 import { loadData, saveData } from "./tools/Storage";
 import { getTime, getMap } from "./tools/Api";
 
@@ -19,6 +20,9 @@ class App extends React.Component {
             win: false,
             lose: this.data.loss,
             date: null,
+            title: null,
+            link: null,
+            author: null,
             day: null,
             next: null,
             nextH: null,
@@ -28,6 +32,8 @@ class App extends React.Component {
             mapLoad: false,
             logoLoad: false,
             loader: true,
+            info: true,
+            infoShow: false,
             help: false,
             stats: false,
             share: false,
@@ -58,7 +64,10 @@ class App extends React.Component {
         this.getYear()
             .then((res) => {
                 this.setState({
-                    date: res.date,
+                    date: parseInt(res.info[0]),
+                    title: res.info[1],
+                    link: res.info[2],
+                    author: res.info[3],
                     day: res.day,
                     next: res.next,
                 });
@@ -94,20 +103,18 @@ class App extends React.Component {
     onFocusUpdate() {
         console.log("here123");
 
-        if(this.state.win){
+        if (this.state.win) {
             clearInterval(this.countDown);
             this.handleCountdown();
         }
     }
 
     getTime = async () => {
-        console.log("tried");
         const response = await getTime();
         return response;
     };
 
     getYear = async () => {
-        console.log("tried");
         const response = await getMap();
         return response;
     };
@@ -133,14 +140,16 @@ class App extends React.Component {
         }
         setTimeout(() => {
             this.setState({
-                logoLoad: true,
-            });
-        }, 500);
-        setTimeout(() => {
-            this.setState({
                 loader: false,
+                infoShow: true,
             });
-        }, 2500);
+        }, 1000);
+    };
+
+    toggleInfo = () => {
+        this.setState({
+            info: !this.state.info,
+        });
     };
 
     toggleHelp = () => {
@@ -261,9 +270,14 @@ class App extends React.Component {
                     long={this.state.long}
                     width={this.state.width}
                 />
-                <div id={this.state.loaded ? "loader-hidden" : "loader"}>
-                    <div id={this.state.logoLoad ? "loadfin" : "loadlet"}>M</div>
-                </div>
+                {this.state.loader ? (
+                    <div id="loader">
+                        <div id="loadlet">M</div>
+                    </div>
+                ) : (
+                    <></>
+                )}
+
                 <div className="vin"></div>
                 {this.state.width > 500 ? (
                     <HeaderBanner toggleHelp={this.toggleHelp} toggleStats={this.toggleStats} />
@@ -299,6 +313,18 @@ class App extends React.Component {
                             </div>
                         </div>
                     </div>
+                ) : (
+                    <></>
+                )}
+                {this.state.info ? (
+                    <MapInfo
+                        show={this.state.infoShow}
+                        date={this.state.day}
+                        toggle={this.toggleInfo}
+                        title={this.state.title}
+                        link={this.state.link}
+                        author={this.state.author}
+                    />
                 ) : (
                     <></>
                 )}

@@ -9,6 +9,7 @@
     font-family: "Dancing Script", cursive;
     width: 60vw;
     max-width: 700px;
+    max-height: 83px;
     height: 8vh;
     font-size: 16px;
     line-height: 1;
@@ -51,7 +52,7 @@
     box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.08), inset 0px -1px 1px rgba(255, 255, 255, 0.08),
         0px -1px 1px rgba(255, 255, 255, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.08);
     display: block;
-    padding: 1.15vh 0;
+    padding: 1.30vh 0;
 }
 .ribbon-content:before,
 .ribbon-content:after {
@@ -85,10 +86,11 @@
     display: flex;
     align-items: center;
     width: 100%;
+    max-height: 70px;
 }
 
 .title {
-    padding-left: 2vw;
+    padding-left: 20px;
     font-size: 5vh;
     color: rgb(171, 0, 0);
     text-shadow: 1px 1px 0 black;
@@ -102,6 +104,7 @@
     margin-left: auto;
     display: flex;
     align-items: center;
+    margin-right: 15px;
 }
 
 .dash {
@@ -120,7 +123,8 @@
     font-weight: bolder;
     color: rgb(0, 88, 143);
     text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.494);
-    font-size: 4vh;
+    margin-right: 5px;
+    font-size: 3vh;
 }
 
 .b,
@@ -138,4 +142,16 @@
 .b:active {
     background-color: rgba(0, 0, 0, 0.105);
     border-radius: 10px;
+}
+
+@media (min-height: 1100px) {
+    .ribbon-content {
+        padding: 15px 0;
+    }
+    .title {
+        font-size: 50px;
+    }
+    .b {
+        font-size: 30px;
+    }
 }

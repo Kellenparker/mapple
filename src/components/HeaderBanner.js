@@ -8,15 +8,12 @@ const HeaderBanner = (props) => {
                     <div className="ribbon-content">
                         <strong className="title">Mapple</strong>
                         <div className="buttons">
-                            <div className="dash">-</div>
                             <button className="b b1" onClick={props.toggleHelp}>
                                 Help
                             </button>
-                            <div className="dash">-</div>
                             <button className="b b1" onClick={props.toggleStats}>
                                 Stats
                             </button>
-                            <div className="dash">-</div>
                         </div>
                     </div>
                 </h1>

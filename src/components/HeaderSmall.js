@@ -7,15 +7,12 @@ const HeaderSmall = (props) => {
                 <div className="header-content">
                     <strong className="title titlesm">Mapple</strong>
                     <div className="buttons buttonssm">
-                        <div className="dash dashsm">-</div>
                         <button className="b bsm b1" onClick={props.toggleHelp}>
-                            help
+                            Help
                         </button>
-                        <div className="dash dashsm">-</div>
                         <button className="b bsm b1" onClick={props.toggleStats}>
-                            stats
+                            Stats
                         </button>
-                        <div className="dash dashsm">-</div>
                     </div>
                 </div>
             </div>

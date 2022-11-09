@@ -1,9 +1,9 @@
 
 .dialogBoxStats {
-    max-height: 560px;
-    max-width: 400px;  
-    height: 70%;
-    width: 90%;
+    max-height: 75%;
+    max-width: 500px;  
+    height: auto;
+    width: 30%;
     background: #f3dab1;
     display: flex;
     flex-direction: column;
@@ -16,7 +16,7 @@
 .statsTitle {
     margin: 0;
     margin-top: 20px;
-    font-size: 7vh;
+    font-size: 50px;
     color: rgb(255, 255, 255);
     text-shadow: 1.5px 1.5px 0 rgb(171, 0, 0), 3px 3px 0 black, 0 0 10px rgba(0, 0, 0, 0.3);
 }
@@ -28,7 +28,7 @@
 
 .stat {
     font-family: "Unna", serif;
-    font-size: 3vh;
+    font-size: 20px;
     text-shadow: 0.3px 0.3px 0 rgb(0, 0, 0);
     text-align: left;
     margin-left: 30px;
@@ -37,7 +37,7 @@
 
 .statVal {
     font-family: "Unna", serif;
-    font-size: 3vh;
+    font-size: 20px;
     font-weight: bold;
     color: rgb(171, 0, 0);
     text-shadow: .7px .7px 0 rgb(0, 0, 0);

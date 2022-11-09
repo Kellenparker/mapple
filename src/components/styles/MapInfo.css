@@ -1,0 +1,56 @@
+
+.hide {
+    display: none;
+}
+
+.show {
+    animation: winFade 0.7s;
+}
+
+.dialogBoxInfo {
+    max-height: 560px;
+    max-width: 400px;  
+    height: auto;
+    width: 90%;
+    background: #f3dab1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0,0,0,.4);
+    border-radius: 10px;
+    overflow: scroll;
+}
+
+.infoTitle {
+    margin: 0;
+    margin-top: 10px;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    text-shadow: 1.5px 1.5px 0 rgb(171, 0, 0), 3px 3px 0 black, 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#thumbnail {
+    margin-top: 10px;
+    align-self: center;
+    width: 50%;
+    box-shadow: 0 0 5px rgb(130, 130, 130);
+}
+
+.attribution {
+    font-family: "Unna", serif;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@keyframes winFade {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+        backdrop-filter: blur(0px);
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(2px);
+    }
+}

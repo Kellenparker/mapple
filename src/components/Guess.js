@@ -18,7 +18,6 @@ class Guess extends React.Component {
 
     componentDidMount() {
         this.inputElement.current.onfocus = () => {
-            console.log("here");
             window.scrollTo(0, 0);
             document.body.scrollTop = 0;
         };
@@ -49,7 +48,7 @@ class Guess extends React.Component {
         }
         let formattedGuess = this.state.value + this.getDistance(this.state.value);
         this.props.setData(this.currentGuess, formattedGuess, this.state.value);
-        if (this.state.value === this.props.date) {
+        if (parseInt(this.state.value) === this.props.date) {
             this.props.correctGuess(this.currentGuess);
             nextVal = this.state.value;
         }

@@ -115,9 +115,9 @@
     font-size: 20vh;
     font-weight: bold;
     color: transparent;
-    text-shadow: 0 0 0px rgba(171, 0, 0, 1), 3px 3px 0 rgba(0, 0, 0, 0.504);
+    text-shadow: 0 0 0px rgba(171, 0, 0, 1), 3px 3px 3px rgba(0, 0, 0, .75);
     font-weight: bold;
-    animation: fadeIn 0.5s;
+    animation: fadeIn .2s;
 }
 
 #loadfin {
@@ -162,10 +162,10 @@
 
 @keyframes fadeIn {
     from {
-        text-shadow: 0 0 10px rgba(171, 0, 0, 0), 3px 3px 10px rgba(0, 0, 0, 0);
+        text-shadow: 0 0 0px rgba(171, 0, 0, 0), 3px 3px 0px rgba(0, 0, 0, 0);
     }
     to {
-        text-shadow: 0 0 0px rgba(171, 0, 0, 1), 3px 3px 0 rgba(0, 0, 0, 0.504);
+        text-shadow: 0 0 0px rgba(171, 0, 0, 1), 3px 3px 3px rgba(0, 0, 0, .75);
     }
 }
 

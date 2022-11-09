@@ -11,7 +11,7 @@ const Map = (props) => {
                     <img
                         id={props.loaded ? (props.long ? "map-w" : "map-h") : "map-hidden"}
                         alt="map"
-                        src={"https://geologicle.s3.amazonaws.com/maps/" + props.num + "/map.jpg"}
+                        src={"https://geologicle.s3.amazonaws.com/" + props.num + "/map.jpg"}
                         onLoad={props.load}
                         width="auto"
                     />
