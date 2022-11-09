@@ -15,10 +15,11 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.data = loadData();
+        console.log(this.data);
         this.state = {
             guesses: this.data.guesses,
             win: false,
-            lose: this.data.loss,
+            loss: this.data.loss,
             date: null,
             title: null,
             link: null,
@@ -316,7 +317,7 @@ class App extends React.Component {
                 ) : (
                     <></>
                 )}
-                {this.state.info ? (
+                {this.state.info && !(this.state.win || this.state.loss) ? (
                     <MapInfo
                         show={this.state.infoShow}
                         date={this.state.day}
