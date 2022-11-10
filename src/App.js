@@ -82,6 +82,9 @@ class App extends React.Component {
                     saveData(this.data);
                     this.setState({
                         guesses: this.data.guesses,
+                        win: false,
+                        loss: false,
+                        completed: false,
                     });
                 }
             })

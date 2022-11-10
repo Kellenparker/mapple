@@ -21,6 +21,8 @@ const Share = (props) => {
             str += "\n";
         }
     });
+    str += "\n";
+    str += "Try it here: mapple.kellenp.com";
 
     navigator.clipboard.writeText(str);
     return (

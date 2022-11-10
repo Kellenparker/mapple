@@ -4,6 +4,7 @@
     max-width: 500px;  
     height: auto;
     width: 35%;
+    min-width: 300px;
     background: #f3dab1;
     display: flex;
     flex-direction: column;
@@ -138,7 +139,11 @@
     }
 }
 
-@media (min-width: 450px) {
+@media (max-width: 1075px){
+
+}
+
+@media (min-width: 1055px) {
     .helpbr {
         display: none !important;
     }
