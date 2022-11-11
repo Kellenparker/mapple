@@ -40,3 +40,7 @@
         opacity: 100;
     }
 }
+
+_::-webkit-full-page-media, _:future, :root #map-w {
+    margin-top: -80px;
+}

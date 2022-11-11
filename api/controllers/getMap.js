@@ -9,7 +9,7 @@ const getMap = async (req, res = response) => {
     });
 
     const MONTH = 11;
-    const DAY = 7;
+    const DAY = 12;
     var now = new Date();
     var start = new Date(now.getFullYear(), MONTH - 1, DAY - 1);
     

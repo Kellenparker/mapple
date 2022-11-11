@@ -31,10 +31,10 @@ class Guess extends React.Component {
 
     getDistance(guess) {
         if (Math.abs(guess - this.props.date) === 0) return " ( Correct! )";
-        else if (Math.abs(guess - this.props.date) < 5) return " ( < 5 years away)";
-        else if (Math.abs(guess - this.props.date) < 15) return " ( < 15 years away)";
-        else if (Math.abs(guess - this.props.date) < 25) return " ( < 25 years away)";
-        else if (Math.abs(guess - this.props.date) > 25) return " ( > 25 years away)";
+        else if (Math.abs(guess - this.props.date) < 5) return " ( < 5 years )";
+        else if (Math.abs(guess - this.props.date) < 15) return " ( < 15 years )";
+        else if (Math.abs(guess - this.props.date) < 25) return " ( < 25 years )";
+        else if (Math.abs(guess - this.props.date) > 25) return " ( > 25 years )";
     }
 
     handleSubmit(event) {
