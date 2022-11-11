@@ -1,4 +1,4 @@
-# ![Mapple](https://github.com/kellenparker/mapple/blob/main/mapplelong.png?raw=true)
+# ![Mapple](https://github.com/kellenparker/mapple/blob/main/mapple.png?raw=true)
 
 ## How to Play
 
