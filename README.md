@@ -6,6 +6,7 @@ In Mapple, you are given 5 tries to guess the correct year that the map depicts.
 
 ### Hints
 
+|---------------------------------------------------------|------------|
 | User guess is more than 25 years away from correct year | > 25 years |
 | User guess is less than 25 years away from correct year | < 25 years |
 | User guess is less than 15 years away from correct year | < 15 years |
