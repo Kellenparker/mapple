@@ -10,7 +10,7 @@ class Guess extends React.Component {
         this.MAX_YEAR_LENGTH = 4;
         this.MAX_GUESSES = 5;
         this.currentGuess = this.props.data.currentGuess;
-        this.inputElement = React.createRef()
+        this.inputElement = React.createRef();
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -78,11 +78,11 @@ class Guess extends React.Component {
                         className="yearfield"
                         type="tel"
                         value={this.state.value}
-                        placeholder="Year"
+                        placeholder="Guess"
                         onChange={this.handleChange}
-                        disabled={!this.props.active}
+                        disabled={this.props.active}
                     />
-                    <button className="subBtn" disabled={!this.props.active}>
+                    <button className="subBtn" disabled={this.props.active}>
                         Submit
                     </button>
                 </form>

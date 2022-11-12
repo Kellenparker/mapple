@@ -46,10 +46,14 @@
 .win-info {
     margin-top: 10px;
     margin-bottom: 0;
-    font-size: 5vh;
+    font-size: 6vh;
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 0 rgb(0, 88, 143), 0 0 20px rgba(0, 0, 0, 0.5);
     animation: winInfoFade 1.5s;
+}
+
+.sub-info{
+    font-size: 4vh;
 }
 
 .win-dialog {
@@ -78,7 +82,7 @@
     animation: winInfoFade 1.5s;
 }
 
-.win-stats {
+.win-right {
     margin-left: 10px;
 }
 

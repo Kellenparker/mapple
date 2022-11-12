@@ -41,6 +41,8 @@
     }
 }
 
-_::-webkit-full-page-media, _:future, :root #map-w {
-    margin-top: -80px;
+@supports (-webkit-touch-callout: none) {
+    #map-w {
+        margin-top: -80px;
+    }
 }

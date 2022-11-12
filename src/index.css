@@ -7,3 +7,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
     position: fixed;
 }
+
+@supports (-webkit-touch-callout: none) {
+    body {
+        letter-spacing: -.2em;
+    }
+}
+

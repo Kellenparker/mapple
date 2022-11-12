@@ -48,3 +48,9 @@
         backdrop-filter: blur(2px);
     }
 }
+
+@supports (-webkit-touch-callout: none) {
+    .dialogCont {
+        letter-spacing: 0;
+    }
+}

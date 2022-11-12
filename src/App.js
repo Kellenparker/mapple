@@ -19,7 +19,9 @@ class App extends React.Component {
         this.state = {
             guesses: this.data.guesses,
             win: false,
+            showRes: this.data.completed,
             loss: this.data.loss,
+            completed: this.data.completed,
             date: null,
             title: null,
             link: null,
@@ -29,7 +31,6 @@ class App extends React.Component {
             nextH: null,
             nextM: null,
             nextS: null,
-            active: true,
             mapLoad: false,
             logoLoad: false,
             loader: true,
@@ -182,6 +183,12 @@ class App extends React.Component {
         });
     };
 
+    hideRes = () => {
+        this.setState({
+            showRes: false
+        })
+    }
+
     handleGuess = (cur, val, valNum) => {
         this.guessesRaw.push(valNum);
         let guessesCopy = [...this.state.guesses];
@@ -199,7 +206,8 @@ class App extends React.Component {
         this.handleCountdown();
         this.setState({
             win: true,
-            active: false,
+            showRes: true,
+            completed: true
         });
         this.data.wins++;
         this.data.total++;
@@ -214,6 +222,8 @@ class App extends React.Component {
         this.handleCountdown();
         this.setState({
             loss: true,
+            showRes: true,
+            completed: true
         });
         this.data.losses++;
         this.data.total++;
@@ -293,16 +303,18 @@ class App extends React.Component {
                     data={this.data}
                     guesses={this.state.guesses}
                     setData={this.handleGuess}
-                    active={this.state.active}
+                    active={this.state.completed}
                     correctGuess={this.handleCorrectGuess}
                     loss={this.handleLoss}
                 />
-                {this.state.win || this.state.loss ? (
+                {(this.state.win || this.state.loss) && this.state.showRes ? (
                     <div className="win-screen">
                         <div className="win-cont">
                             <h1 id="win-title">{this.state.loss ? "Better luck next time!" : "Congrats!"}</h1>
+                            <h3 className="win-info">Correct Year:</h3>
+                            <h3 className="win-info sub-info">{this.state.date}</h3>
                             <h3 className="win-info">{"Next Mapple:"}</h3>
-                            <h3 className="win-info">
+                            <h3 className="win-info sub-info">
                                 {this.state.nextH === null
                                     ? ""
                                     : this.state.nextH + ":" + this.state.nextM + ":" + this.state.nextS}
@@ -311,8 +323,11 @@ class App extends React.Component {
                                 <button className="win-btn" onClick={this.toggleStats}>
                                     Stats
                                 </button>
-                                <button className="win-btn win-stats" onClick={this.toggleShare}>
+                                <button className="win-btn win-right" onClick={this.toggleShare}>
                                     Share
+                                </button>
+                                <button className="win-btn win-right" onClick={this.hideRes}>
+                                    View Map
                                 </button>
                             </div>
                         </div>
@@ -325,6 +340,7 @@ class App extends React.Component {
                         show={this.state.infoShow}
                         date={this.state.day}
                         toggle={this.toggleInfo}
+                        active={this.state.completed}
                         title={this.state.title}
                         link={this.state.link}
                         author={this.state.author}
