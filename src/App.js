@@ -106,8 +106,6 @@ class App extends React.Component {
     }
 
     onFocusUpdate() {
-        console.log("here123");
-
         if (this.state.win) {
             clearInterval(this.countDown);
             this.handleCountdown();
