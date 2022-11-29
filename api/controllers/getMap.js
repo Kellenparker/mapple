@@ -2,6 +2,8 @@ const { response } = require("express");
 const s3 = require("aws-sdk/clients/s3"); // npm install aws-sdk
 require("dotenv").config();
 
+const numMaps = 3;
+
 const getMap = async (req, res = response) => {
     var s3Bkt = new s3({
         accessKeyId: process.env.AWS_ACCESS_KEY_ID_,
@@ -9,7 +11,7 @@ const getMap = async (req, res = response) => {
     });
 
     const MONTH = 11;
-    const DAY = 18;
+    const DAY = 21;
     var now = new Date();
     var start = new Date(now.getFullYear(), MONTH - 1, DAY - 1);
     
@@ -19,7 +21,7 @@ const getMap = async (req, res = response) => {
 
     var diff = now - start;
     var oneDay = 1000 * 60 * 60 * 24;
-    var day = Math.floor(diff / oneDay);
+    var day = (Math.floor(diff / oneDay) % numMaps) + 1;
 
     var params = { Bucket: "geologicle", Key: `${day}/info.txt` };
     s3Bkt.getObject(params, function (err, data) {
